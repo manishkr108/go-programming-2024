@@ -1,0 +1,16 @@
+% Go is a tool for managing Go source code
+
+    -> 1 - Go run: it compiles and run the application. it does't produce an executable
+         - go run file.go: compiles and immediately runs Go programs.
+    -> 2 - go build: it just compiles the application. it produces an executable
+        ? go build file.go: compiles a bunch of Go source file. it compiles packages and dependencies.
+    - if you run go build it will compile the file in the current directory and will produce an executable file with the name of 
+    - the working directory.
+    ! go build -o app will produce an executable file called app
+% Compile for Windows -> GOOS=windows GoARCH=amd64 build -0 wiapp.exe
+
+ ? Go strong suggest certain style
+ - Gofmt which coms from golang formatter will formate a programs cource code in an idiomatic way that is easy to ready and understand.
+ ! this tool, gofmt is built into the language runtime, and it formates go cide according to a set stable , well understand language rules.
+ ! gofmt -w file.go will format the file and write the result back to the file.
+ 
