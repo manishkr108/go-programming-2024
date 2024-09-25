@@ -1,0 +1,29 @@
+% Comparison Operators : Compare two operands and yield an boolean value.
+    - There are the following comparision Operators;
+    - Equal to (==) 
+    - Not Equal to (!=)
+    - Greater than (>)
+    - Less than (<)
+    - less or equal (<=)
+    - Greater or equal (>=)
+   example
+   a,b := 5,10
+   fmt.Println(a ==b )// false
+   fmt.Println(a !=b )// true
+   fmt.Println(a > b )// false
+   fmt.Println(a < b )// true
+   fmt.Println(a >= b )// false
+   fmt.Println(a <= b )// true
+
+% -----------Logical Operators-----------------
+    - Logical operators apply to boolean values and yield a result of the same type as the operands (boolean)
+    - There are the following logical operators;
+     && (conditional and)
+     || (conditional or)
+     ! (not)
+     - example
+     a,b := true,false
+     fmt.Println(a && b )// false
+     fmt.Println(a || b )// true
+     fmt.Println(!a )// false
+     

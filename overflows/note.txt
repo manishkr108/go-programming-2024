@@ -1,0 +1,14 @@
+var a = 5
+var b int64 = 5
+
+	- fmt.Println(a == b) //* invalid operation: a == b (mismatched types int and int64)compilerMismatchedTypes)
+
+% ------number to string --and -- String to Number
+    s := string(99)
+    fmt.Println(s)//c
+
+    - Other conversion
+    // 1. string to int strconv.Atoi(string to int)
+    -  strconv.Itoa // int to assice
+    // 2. string to float strconv.ParseFloat(string to float)
+   
