@@ -1,8 +1,7 @@
 # go-programming-2024
 go-programming-2024
 
-# curd-go-with-react
-backend : Go frontend:react 
+
 <h1>STAR</h1>
 <h1 align="center">Hi 👋, I'm Manish Kumar</h1>
 <h3 align="center">A passionate Software developer from India</h3>
