@@ -1,0 +1,5 @@
+% ------------- Labels Statement ------------------
+    - labels are used in breck, continue and goto Statement
+    - it is illegal to define a label that is never used.
+    - most of the time labels are used to terminate outer enclosing loops
+    - labels are used to jump to a specific point in the code.

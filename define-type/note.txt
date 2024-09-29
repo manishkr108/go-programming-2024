@@ -1,0 +1,5 @@
+% ---------Why define new type-------------
+    - we can attach methods to newly defined types
+    - we can define new types that are more specific than the original type
+    % type safety. we must convert one type into another to perform operations with them.
+    ? Redability: when we defined a new type lets say type usd float64 we know that new type represents the US Dollar not only floats
