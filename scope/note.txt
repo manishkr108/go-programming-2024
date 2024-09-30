@@ -1,0 +1,24 @@
+% --------------------Scopes In Go ----------------------
+
+    - 1. scope means visibility
+    - 2. The scope or the lifetime of a variable is the interval of time during which it exist as the program excutes.
+    - 3. A name cannot be declared again in the same scope ( for example a function in the package scope ), but it declear in another scopes.
+
+    in go there are 3 scopes:
+    1. package scope
+    2. file scope
+    3. block(local) scope
+
+     example
+
+     package main 
+
+     import "fmt" // file scope
+
+     const done = false // package scope
+
+     func main(){
+        x:= 10 // local (block) scope
+        fmt.Println(x)
+
+     }
