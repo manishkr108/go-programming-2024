@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strings"
 )
 
 func main() {
@@ -46,4 +47,86 @@ func main() {
 		 It helps you determine the underlying data type of an object, whether it's a struct, array, slice, map, pointer, etc.
 	*/
 
+	abc := [...]int{2, 3, 4, 5, 6, 7, 0}
+	fmt.Printf("%#v\n", abc) //[7]int{2, 3, 4, 5, 6, 7, 0}
+	fmt.Printf("%v\n", abc)  // [2 3 4 5 6 7 0]
+
+	a6 := [...]int{1,
+		2,
+		3,
+		4,
+		5, // in last element must add comma
+	}
+	fmt.Println(a6)
+
+	//  Add and remove elements
+
+	a6[0] = 9
+	fmt.Println(a6) //[9 2 3 4 5]
+
+	// a6[10] =12 // invalid argument: index 10 out of bounds -> there is no element index 10
+
+	//How to Iterate array (how many way)
+	// 1. using range
+	//range = here range is just a language key word used for iteration.
+	for i, v := range a6 {
+		fmt.Println("Index: ", i, "Value:", v)
+	}
+
+	fmt.Println(strings.Repeat("#", 20))
+	//2nd  way
+
+	for i := 0; i < len(a6); i++ {
+		fmt.Println("Index: ", i, "Value:", a6[i])
+	}
+
+	// Lets create multi dimention array
+
+	balance := [2][3]int{
+		{1000, 2000, 3000},
+		{4000, 5000, 6000},
+	}
+
+	fmt.Println(balance)
+
+	m := [3]int{1, 2, 3}
+
+	n := m
+
+	fmt.Println("n equal to m :", n == m) //n equal to m : true
+	m[0] = -1
+
+	fmt.Println("n m :", n, m) //n m : [1 2 3] [-1 2 3]
+
+	fmt.Println("n equal to m :", n == m) //n equal to m : false
+	// 2 arrays are equal if they have the same length and the same elements, in the same order
+
+	// Array with keyed Elements
+
+	grade := [3]int{
+		1: 90,
+		0: 70,
+		2: 80,
+	}
+
+	fmt.Println(grade) // [70 90 80]
+
+	acco := [3]int{2: 50}
+	fmt.Println(acco) //[0 0 50]
+
+	names := [...]string{
+		5: "paris",
+	}
+	fmt.Println(names, len(names)) //[     paris] 6
+
+	city := [...]string{
+		5:       "delhi",
+		"Noida", // index 6 insert in last if key not there
+		1:       "India",
+	}
+
+	fmt.Printf("%#v\n", city) //[7]string{"", "India", "", "", "", "delhi", "Noida"}
+
+	weekend := [7]bool{5: true, 6: true}
+	fmt.Println(weekend) // [false false false false false true true]
 }

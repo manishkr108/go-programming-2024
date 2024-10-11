@@ -1,0 +1,57 @@
+Array
+- Has a fixed length defined at compile time
+- The length of an array is part of its type, defined at compile time and can not be changed
+- By defalut an uninitialized array has all element equal to zero
+
+Slice
+- Has a dynamic length (it can  shink or grow)
+- The length of a slice is not part of its type, it is determined at runtime
+- an uninitialized slice is equal to nil (its zero value is nil)
+
+--------------------------------------------------------------
+* both slice and an array can contain only same type of elements
+* we can create a keyed slice like keyed array
+
+In Go, list := []int{1, 2, 3, 4} is a slice, not an array.
+
+Here's the difference between a slice and an array in Go:
+
+Array: An array has a fixed size, which is part of its type, and it cannot be resized. For example:
+
+
+var arr [4]int = [4]int{1, 2, 3, 4}  // This is an array with a fixed length of 4
+Slice: A slice is a dynamically sized, flexible view into the elements of an array. It does not include the size in its type, and you can append or modify it as needed. For example:
+
+
+list := []int{1, 2, 3, 4}  // This is a slice
+Since your declaration omits the length ([]int{}), list is a slice.
+
+In the declaration list := [...]int{2, 3, 4, 5}, this is an array, not a slice.
+
+The [...] syntax in Go is used to define an array where the length is inferred from the number of elements provided in the literal. In this case, the array has a fixed size of 4 elements.
+
+Explanation:
+Array: The type [...]int{2, 3, 4, 5} means the array has a length of 4, and it's determined by the number of elements between the curly braces. This is a fixed-length array.
+
+
+list := [...]int{2, 3, 4, 5}  // Array of length 4
+Slice: A slice would not specify the length or use [...]. For example:
+
+
+list := []int{2, 3, 4, 5}  // This would be a slice
+Since your code uses [...], list is an array.
+
+
+
+Feature               	                                         Array	                                                         Slice
+Size                                        Fixed size, determined at compile time.                         Dynamic size, can grow or shrink.
+
+Syntax                                      var arr [4]int = [4]int{1, 2, 3, 4}                             var slice []int = []int{1, 2, 3, 4}
+Length                                      Length is part of the type (e.g., [4]int).                      Length is not part of the type (e.g., []int).
+Capacity                                    apacity is always equal to length.                              Capacity can be larger than the current length.
+Memory Allocation                           Allocates memory for all elements, even if unused.              Uses dynamic arrays under the hood, reallocating as needed.
+Resizable                                   Cannot change size once created.                                Can be resized using functions like append().
+Reference Behavior                          Direct value type (copy of array).	                            Reference type, referencing the underlying array.
+Efficiency                                  More memory-efficient if fixed size is known.                   More flexible and convenient for variable-sized data.
+Passing to Functions                        Passed by value (copy of the array).	                        Passed by reference (points to the underlying array).
+Built-in Functions                          No built-in functions like append, copy.                        Has built-in functions such as append, copy, len, cap.
