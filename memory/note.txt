@@ -1,0 +1,6 @@
+Memory leaks are a common issue regardless of the programming language used. However, it’s relatively complex to write memory-leaking code in Go. This article will illustrate several scenarios where memory leaks may occur, allowing us to learn how to avoid them by studying these anti-patterns.
+
+Not Closing Opened Files
+When you finish an open file, you should always call its Close method. Failing to do so may result in reaching the maximum number of file descriptors, preventing you from opening new files or connections. This can lead to a "too many open files" error, as shown below:
+
+
