@@ -1,4 +1,4 @@
-1. what is  variadic function 
+1. **what is  variadic function** 
 
 In Go, a variadic function is a function that can accept a variable number of arguments. This allows you to pass zero or more arguments of a specified type to the function. Variadic functions are defined using the ... syntax before the type of the variable argument.
 
