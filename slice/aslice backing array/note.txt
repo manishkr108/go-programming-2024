@@ -1,0 +1,15 @@
+Slice Baking (Underlying) Array
+__________________________________________________________________________________________
+
+* when creating a slice, behind the scenes Go creates a hidden array called Baking Array.
+* The baking array stores the elements, not the slice
+* Go impliments a slice as a data structure called slice header.
+
+Slice Header contains 3 fields:
+
+1. The address of the baking array (Pointer)
+2. The length of the slice len() return it
+3. The capacity of the slice cap() return it.
+
+* slice Header is the rentime representation of a slice.
+* a nil slice does't a have baking arrayecho
