@@ -33,12 +33,11 @@ func main() {
 [1,2,3] == [1,2,3] = true
 [1,2,3]==[1,3,2] = false
 
-
+<hr>
 Slice
 - Has a dynamic length (it can  shink or grow)
 - The length of a slice is not part of its type, it is determined at runtime
 - an uninitialized slice is equal to nil (its zero value is nil)
-
 --------------------------------------------------------------
 * both slice and an array can contain only same type of elements
 * we can create a keyed slice like keyed array
