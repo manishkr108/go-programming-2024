@@ -131,13 +131,13 @@ Slicing: subSlice := nums[1:4] creates a sub-slice from the second to the fourth
 Modifying a Sub-slice: Changing subSlice[0] updates the original nums slice, showing the reference behavior of slices.<br>
 Length and Capacity: len(nums) gives the current number of elements, and cap(nums) gives the capacity (which can be larger than the length due to underlying array resizing).<br>
 
-<strong>Key Points About Slices:</strong>
+<h2>Key Points About Slices:</h2>
 Slicing: You can create a new slice from an existing slice using the slicing operator slice[low:high].<br>
 Capacity: Slices may have extra capacity. As you append elements, Go automatically resizes the underlying array when necessary.<br>
 Zero Value: The zero value of a slice is nil, which behaves like a slice with length and capacity 0.<br>
 
 
-<b>Recap of Key Functions:<b>
+<h2>Recap of Key Functions:<h2>
 append(): Adds elements to a slice, dynamically growing it.<br>
 copy(): Copies elements from one slice to another.<br>
 len(): Returns the current number of elements in the slice.<br>
