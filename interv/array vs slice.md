@@ -125,22 +125,23 @@ func main() {
 }
 
 Explanation:
-Slice Literal: nums := []int{10, 20, 30} creates a slice with 3 elements. The underlying array is automatically managed by Go.
-Appending: append(nums, 40, 50) adds two new elements to the slice, dynamically increasing its size.
-Slicing: subSlice := nums[1:4] creates a sub-slice from the second to the fourth element of nums. The sub-slice is a reference to the same underlying array, so changes in the sub-slice affect the original slice.
-Modifying a Sub-slice: Changing subSlice[0] updates the original nums slice, showing the reference behavior of slices.
-Length and Capacity: len(nums) gives the current number of elements, and cap(nums) gives the capacity (which can be larger than the length due to underlying array resizing).
-Key Points About Slices:
-Slicing: You can create a new slice from an existing slice using the slicing operator slice[low:high].
-Capacity: Slices may have extra capacity. As you append elements, Go automatically resizes the underlying array when necessary.
-Zero Value: The zero value of a slice is nil, which behaves like a slice with length and capacity 0.
+Slice Literal: nums := []int{10, 20, 30} creates a slice with 3 elements. The underlying array is automatically managed by Go.<br>
+Appending: append(nums, 40, 50) adds two new elements to the slice, dynamically increasing its size.<br>
+Slicing: subSlice := nums[1:4] creates a sub-slice from the second to the fourth element of nums. The sub-slice is a reference to the same underlying array, so changes in the sub-slice affect the original slice.<br>
+Modifying a Sub-slice: Changing subSlice[0] updates the original nums slice, showing the reference behavior of slices.<br>
+Length and Capacity: len(nums) gives the current number of elements, and cap(nums) gives the capacity (which can be larger than the length due to underlying array resizing).<br>
+
+<strong>Key Points About Slices:</strong>
+Slicing: You can create a new slice from an existing slice using the slicing operator slice[low:high].<br>
+Capacity: Slices may have extra capacity. As you append elements, Go automatically resizes the underlying array when necessary.<br>
+Zero Value: The zero value of a slice is nil, which behaves like a slice with length and capacity 0.<br>
 
 
-Recap of Key Functions:
-append(): Adds elements to a slice, dynamically growing it.
-copy(): Copies elements from one slice to another.
-len(): Returns the current number of elements in the slice.
-cap(): Returns the total capacity of the slice, or how many elements it can hold before resizing.
+<b>Recap of Key Functions:<b>
+append(): Adds elements to a slice, dynamically growing it.<br>
+copy(): Copies elements from one slice to another.<br>
+len(): Returns the current number of elements in the slice.<br>
+cap(): Returns the total capacity of the slice, or how many elements it can hold before resizing.<br>
 
 Here’s a simple yet powerful example to supercharge your Go skills with slices👇:
 
