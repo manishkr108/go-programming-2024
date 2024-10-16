@@ -137,7 +137,7 @@ Capacity: Slices may have extra capacity. As you append elements, Go automatical
 Zero Value: The zero value of a slice is nil, which behaves like a slice with length and capacity 0.<br>
 
 
-<h2>Recap of Key Functions:<h2>
+<h2>Recap of Key Functions:</h2>
 append(): Adds elements to a slice, dynamically growing it.<br>
 copy(): Copies elements from one slice to another.<br>
 len(): Returns the current number of elements in the slice.<br>
@@ -145,9 +145,9 @@ cap(): Returns the total capacity of the slice, or how many elements it can hold
 
 Here’s a simple yet powerful example to supercharge your Go skills with slices👇:
 
-tasks := []string{"Design", "Develop", "Test"}
-tasks = append(tasks, "Deploy")
-backupTasks := make([]string, len(tasks))
-copy(backupTasks, tasks)
-fmt.Println(tasks, backupTasks)
+tasks := []string{"Design", "Develop", "Test"}<br>
+tasks = append(tasks, "Deploy")<br>
+backupTasks := make([]string, len(tasks))<br>
+copy(backupTasks, tasks)<br>
+fmt.Println(tasks, backupTasks)<br>
 
